@@ -257,7 +257,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_to6ph")
 
 [node name="Rimuru" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Sphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.000633478, -0.000469813, 1, 0.000861194, 1, 0.000469268, -1, 0.000860896, 0.00063391, 0.00778252, 0.0114344, 0.0124696)

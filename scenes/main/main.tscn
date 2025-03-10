@@ -1,19 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://do5hdfidnin8c"]
+[gd_scene load_steps=8 format=3 uid="uid://do5hdfidnin8c"]
 
 [ext_resource type="Script" uid="uid://1688evy81md1" path="res://scenes/main/main.gd" id="1_iuonh"]
 [ext_resource type="PackedScene" uid="uid://b2qjv0h5myxjq" path="res://scenes/shuna/shuna.tscn" id="2_k2fmo"]
+[ext_resource type="Texture2D" uid="uid://cegxj647yniej" path="res://assets/03.jpg" id="2_l3cfh"]
 [ext_resource type="PackedScene" uid="uid://svsyp1usra7m" path="res://scenes/rimuru/rimuru.tscn" id="3_k2fmo"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iuonh"]
-sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
-ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_6q06x"]
+panorama = ExtResource("2_l3cfh")
 
 [sub_resource type="Sky" id="Sky_k2fmo"]
-sky_material = SubResource("ProceduralSkyMaterial_iuonh")
+sky_material = SubResource("PanoramaSkyMaterial_6q06x")
 
 [sub_resource type="Environment" id="Environment_l3cfh"]
 background_mode = 2
 sky = SubResource("Sky_k2fmo")
+sky_rotation = Vector3(0, 1.5708, 0)
+ambient_light_sky_contribution = 0.2
+ambient_light_energy = 0.2
 tonemap_mode = 2
 glow_enabled = true
 
@@ -21,7 +24,9 @@ glow_enabled = true
 script = ExtResource("1_iuonh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 1.99688, 2)
+light_energy = 0.5
+light_indirect_energy = 0.5
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
