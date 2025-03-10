@@ -7,9 +7,6 @@ var angle := 0.0
 @onready var sphere: MeshInstance3D = $Sphere
 
 
-func _ready() -> void:
-	look_at.target_node = sphere.get_path()
-
 func _process(delta):
 
 	# Update the angle
