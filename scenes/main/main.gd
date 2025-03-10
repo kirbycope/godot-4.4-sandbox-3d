@@ -21,7 +21,7 @@ func _process(delta):
 	if angle < -3:
 		shuna_look_at.target_node = rimuru.get_path()
 	else:
-		shuna_look_at.target_node = ""
+		shuna_look_at.target_node = "Camera3D"
 	if angle < -6.0:
 		angle = 0.0
 
